@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Baloo Bhai 2';
+}
+
+body {
+    background-image: url(background.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.nav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(19, 18, 18, 0.9);
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+
+.logo img{
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.logo h2{
+    color: firebrick;
+    font-size: 2.5rem;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.logo h2:hover{
+    color: white;
+    transition: all ease-in-out 0.3s;
+}
+
+#check{
+    display: none;
+}
+
+.toogle-btn{
+    color: white;
+    font-size: 30px;
+    margin-right: 40px;
+    display: none;
+    cursor: pointer;
+}
+
+.toogle-btn:hover{
+    color: grey ;
+    transition: ease-in-out all 0.3s;
+}
+
+.nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+}
+
+.nav ul li{
+    list-style: none;
+    padding:  0 10px;
+    font-size: 20px;
+}
+
+.nav ul li a{
+    color: white;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+.nav ul li a:hover{
+    color: firebrick;
+    font-weight: 700;
+    transition: all ease-in-out 0.3s;
+    border-bottom: firebrick 2px solid;
+}
+
+@media (max-width: 1200px){
+
+    .logo h2{
+        font-size: 2rem;
+    }
+
+    .nav ul{
+        margin-right: 20px;
+    }
+
+    .nav ul li{
+        font-size: 20px;
+    }
+
+    .nav ul li a{
+        letter-spacing: 0;
+    }
+
+}
+
+@media (max-width: 970px){
+
+    .toogle-btn{
+        display: block;
+    }
+
+    .nav .menu{
+        margin-top: 585px;
+        height: auto;
+        width: 100vw;
+        z-index: -1;
+        background-color: rgba(19, 18, 18, 0.9);
+        margin-left: -100%;
+        position: fixed;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-bottom: 60px;
+    }
+
+    #check:checked ~ .menu{
+        margin-left: 0%;
+        transition: 0.3s ease-in-out all;
+    }
+    
+    .nav ul li{
+        margin: 5px 20px;
+        width: 100vw;
+    }
+    
+    .nav ul li a{
+        font-size: 22px;
+        margin-top: -100%;
+        line-height: 80px;
+        width: 100vw;
+    }
+    
+    #check:Checked ~ .menu li a{
+        transition: all ease-in-out 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+        margin-top: 0%;
+    }
+
+}
+
+@media (max-width:375px){
+
+    .nav .logo{
+        margin-left: 5px;
+    }
+
+    .nav .log img{
+        width: 40px;
+        height: auto;
+    }
+     .nav .logo h2{
+        font-size: 1.5rem;
+        margin-left: 5px;
+    }
+}
