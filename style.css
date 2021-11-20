@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -35,8 +36,10 @@ body {
     width: 50px;
     height: auto;
     border-radius: 50%;
-    margin: 10px;
+    margin: 0px 10px;
+    cursor: pointer;
 }
+
 
 .logo h2{
     color: firebrick;
@@ -84,14 +87,16 @@ body {
 .nav ul li a{
     color: white;
     text-decoration: none;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.1px;
 }
 
 .nav ul li a:hover{
     color: firebrick;
-    font-weight: 700;
+    /* font-weight: 900; */
+    box-shadow: 3px white;
     transition: all ease-in-out 0.3s;
-    border-bottom: firebrick 2px solid;
+    border-bottom: firebrick 0.5px solid;
+    border-top: firebrick 0.5px solid;
 }
 
 @media (max-width: 1200px){
@@ -116,13 +121,19 @@ body {
 
 @media (max-width: 970px){
 
+    .nav .logo img{
+        /* width: 40px;
+        height: auto; */
+        margin: 5px;
+    }
+
     .toogle-btn{
         display: block;
     }
 
     .nav .menu{
-        margin-top: 585px;
-        height: auto;
+        margin-top: 565px;
+        height: 500px;
         width: 100vw;
         z-index: -1;
         background-color: rgba(19, 18, 18, 0.9);
@@ -131,7 +142,8 @@ body {
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        padding-bottom: 60px;
+        /* padding-bottom: 60px; */
+        /* line-height: 20%; */
     }
 
     #check:checked ~ .menu{
@@ -142,17 +154,18 @@ body {
     .nav ul li{
         margin: 5px 20px;
         width: 100vw;
+        line-height: 4rem;
     }
     
     .nav ul li a{
         font-size: 22px;
         margin-top: -100%;
-        line-height: 80px;
         width: 100vw;
     }
     
     #check:Checked ~ .menu li a{
-        transition: all ease-in-out 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+        transition: all ease-in-out 0.5s ;
+        transition-delay: 0.3s;
         margin-top: 0%;
     }
 
@@ -164,12 +177,19 @@ body {
         margin-left: 5px;
     }
 
-    .nav .log img{
+    .nav .logo img{
         width: 40px;
         height: auto;
+        margin: 10px;
     }
-     .nav .logo h2{
+
+    .nav .logo h2{
         font-size: 1.5rem;
         margin-left: 5px;
+    }
+
+    .toogle-btn{
+        font-size: 25px;
+        margin-right: 20px;
     }
 }
